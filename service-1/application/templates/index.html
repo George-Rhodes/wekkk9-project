@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<center><div class='form'>
+	<form action="{{ url_for('lotto') }}">
+    <button type="submit">Generate your random lotto ticket and prize</button>
+    </form></center>
+{% endblock body_content %}

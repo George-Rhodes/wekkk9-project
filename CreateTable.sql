@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS project;
+CREATE TABLE project;
 USE project;
 CREATE TABLE IF NOT EXISTS ticks
              (

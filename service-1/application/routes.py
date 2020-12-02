@@ -1,3 +1,10 @@
+from flask import redirect, url_for, Response, request
+from application import app
+import requests
+import random
+
+
+
 @app.route('/')
 
 @app.route('/home', methods=['GET'])

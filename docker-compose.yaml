@@ -33,3 +33,13 @@ services:
       protocol: tcp
     deploy:
       replicas: 1
+  db:
+    image: mysql:5.7
+    container_name: db
+    env_file:
+      - password.env
+    volumes:
+      - ./CreateTable.sql:/docker-entrypoint-initdb.d/CreateTable.sql
+    ports:
+    - target: 3306
+      published: 3306

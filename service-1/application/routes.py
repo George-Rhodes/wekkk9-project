@@ -1,16 +1,13 @@
-from flask import redirect, url_for, Response, request
+from flask import redirect, url_for, Response, request, render_template
 from application import app
 import requests
 import random
-
-
 
 @app.route('/')
 
 @app.route('/home', methods=['GET'])
 def home():
     return render_template('index.html', title='click the lotto button')
-
 
 @app.route('/lotto', methods=['GET', 'POST'])
 def lotto():

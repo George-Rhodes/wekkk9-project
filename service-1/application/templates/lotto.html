@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<div class="">
+    <h1>Your ticket was:  {{ ticket }}</h1>
+    <h1> your prize is  {{ prize }}</h1>
+</div>
+<div class='form'>
+    <form action="{{ url_for('animal') }}">
+    <button type="submit">Randomise</button>
+    </form></center
+
+{% endblock body_content %}

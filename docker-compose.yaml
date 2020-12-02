@@ -39,7 +39,6 @@ services:
     env_file:
       - password.env
     volumes:
-      - ./CreateTable.sql:/docker-entrypoint-initdb.d/CreateTable.sql
-    ports:
+      - ./CreateTable.sql:/docker-entrypoint-initdb.d/db
     - target: 3306
       published: 3306

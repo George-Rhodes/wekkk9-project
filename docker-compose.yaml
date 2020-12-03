@@ -47,6 +47,6 @@ services:
       source: ticket_data
       target: /var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      - MYSQL_ROOT_PASSWORD=cheeky 
 volumes:
   ticket_data:

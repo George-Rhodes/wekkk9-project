@@ -1,6 +1,8 @@
 from flask import redirect, url_for, Response, request, render_template
+
 from application import app, db
 from application.models import ticks
+
 import requests
 import random
 
@@ -16,6 +18,7 @@ def lotto():
     number=requests.get('http://service-3:5002/number')
     ticket= str(alpha.text) + str(number.text)
     prize=requests.post('http://service-4:5003/prize', data=ticket)
+
     prize_str = str(prize.text)
     ted= ticks(ticket_num=ticket, prize_info=prize_str)
     db.session.add(ted)

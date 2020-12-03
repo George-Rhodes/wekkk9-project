@@ -1,6 +1,6 @@
 from flask import redirect, url_for, Response, request, render_template
 from application import app, db
-from aplpication.models import ticket_prize
+from application.models import ticket_prize
 import requests
 import random
 

@@ -17,6 +17,4 @@ def lotto():
     ticket= str(alpha.text) + str(number.text)
     prize=requests.post('http://service-4:5003/prize', data=ticket)
     t = ticket_prize(ticket=ticket, prize=prize )
-    db.session.add(t)
-    db.session.commit()
     return render_template('lotto.html', title='lotto draw is', ticket=ticket, prize=prize.text)

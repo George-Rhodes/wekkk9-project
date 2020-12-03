@@ -9,6 +9,10 @@ services:
       protocol: tcp
     deploy:
       replicas: 1
+    depends_on: 
+      - database
+    environment: 
+      - MYSQL_ROOT_PASSWORD=cheeky
   service-2:
     image: georgerhodes/service-2:latest      
     build: ./service-2
@@ -33,3 +37,16 @@ services:
       protocol: tcp
     deploy:
       replicas: 1
+  database:
+    image: georgerhodes/database:latest
+    build: ./database
+    ports:
+    - target: 3306
+    volumes:
+    - type: volume
+      source: ticket_data
+      target: /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=cheeky 
+volumes:
+  ticket_data:

@@ -17,6 +17,10 @@ services:
       protocol: tcp
     deploy:
       replicas: 1
+    depends_on: 
+      - database
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
   service-3:
     image: georgerhodes/service-3:latest
     build: ./service-3
@@ -33,3 +37,16 @@ services:
       protocol: tcp
     deploy:
       replicas: 1
+   database:
+    image: georgerhodes/db:latest
+    build: ./database
+    ports:
+    - target: 3306
+    volumes:
+    - type: volume
+      source: ticket_data
+      target: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+volumes:
+  ticket_data:

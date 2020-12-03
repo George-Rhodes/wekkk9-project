@@ -38,7 +38,7 @@ services:
     deploy:
       replicas: 1
   database:
-    image: georgerhodes/db:latest
+    image: georgerhodes/database:latest
     build: ./database
     ports:
     - target: 3306

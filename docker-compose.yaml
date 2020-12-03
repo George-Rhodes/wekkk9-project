@@ -12,7 +12,7 @@ services:
     depends_on: 
       - database
     environment: 
-      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      - MYSQL_ROOT_PASSWORD=cheeky
   service-2:
     image: georgerhodes/service-2:latest      
     build: ./service-2

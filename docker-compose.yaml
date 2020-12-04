@@ -8,7 +8,11 @@ services:
       published: 5000
       protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
+    depends_on: 
+      - database
+    environment: 
+      - MYSQL_ROOT_PASSWORD=cheeky
   service-2:
     image: georgerhodes/service-2:latest      
     build: ./service-2
@@ -16,15 +20,15 @@ services:
     - target: 5001
       protocol: tcp
     deploy:
-      replicas: 3
-    service-3:
+      replicas: 1
+  service-3:
     image: georgerhodes/service-3:latest
     build: ./service-3
     ports:
     - target: 5002
       protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
   service-4:
     image: georgerhodes/service-4:latest      
     build: ./service-4
@@ -32,4 +36,25 @@ services:
     - target: 5003
       protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
+   nginx:
+    image: nginx:alpine
+    ports:
+     - target: 80
+       published: 80
+       protocol: tcp
+    deploy:
+      replicas: 1
+  database:
+    image: georgerhodes/database:latest
+    build: ./database
+    ports:
+    - target: 3306
+    volumes:
+    - type: volume
+      source: ticket_data
+      target: /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=cheeky 
+volumes:
+  ticket_data:

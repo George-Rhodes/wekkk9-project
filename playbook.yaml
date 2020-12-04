@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   roles:
-  - common
+  - commen
 - hosts: managers
   become: yes
   roles:

@@ -14,3 +14,4 @@ PyMySQL==0.10.1
 pytest-cov
 pytest
 flask-testing
+gunicorn==20.0.4

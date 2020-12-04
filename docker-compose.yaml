@@ -37,14 +37,6 @@ services:
       protocol: tcp
     deploy:
       replicas: 3
-  nginx:
-    image: nginx:alpine
-    ports:
-     - target: 80
-       published: 80
-       protocol: tcp
-    deploy:
-      replicas: 1
   database:
     image: georgerhodes/database:latest
     build: ./database

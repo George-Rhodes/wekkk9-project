@@ -1,9 +1,9 @@
 #!/bin/bash
 ssh manager << EOF
 docker pull georgerhodes/service-1:latest
-docker pull georgerhodes/service-1:latest
-docker pull georgerhodes/service-1:latest
-docker pull georgerhodes/service-1:latest
+docker pull georgerhodes/service-2:latest
+docker pull georgerhodes/service-3:latest
+docker pull georgerhodes/service-4:latest
 docker pull nginx:alpine
 git clone https://github.com/George-Rhodes/wekkk9-project.git
 cd wekkk9-project

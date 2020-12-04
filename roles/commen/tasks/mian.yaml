@@ -58,4 +58,4 @@
 - name: Install Docker SDK
   pip:
     name: docker
-    state: latest
+    executable: pip3

@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml
+sudo /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml

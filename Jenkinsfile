@@ -1,25 +1,24 @@
 pipeline{
     agent any
-
-	stages{
+    stages{
 		stage('Install Docker using ansible'){
             steps{
-                sh ". ./scripts/ansible.sh"
+                sh " ./scripts/ansible.sh"
                 	}
             	}
 		stage ('Test application'){
 			steps{
-				sh ". ./scripts/tests.sh"
+				sh " ./scripts/tests.sh"
 			} 
 		}
 		stage ('Push Docker'){
             steps{
-                sh ". ./scripts/build.sh"
+                sh " ./scripts/build.sh"
                         }
                 }
         stage('Deploy application'){
             steps{
-                sh ". ./scripts/deploy.sh"
+                sh " ./scripts/deploy.sh"
 
                         }
 

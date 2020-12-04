@@ -1,0 +1,6 @@
+Flask
+flask-testing
+pytest
+requests
+pytest-cov
+requests_mock

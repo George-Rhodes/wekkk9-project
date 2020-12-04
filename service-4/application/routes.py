@@ -13,7 +13,7 @@ def prize():
     elif response[0] == "G" and response[1] == "G" :
         prize = "you have won a life time supply of money , trip to the Bahamas, and your own private island. Our agent will contact you shortly, dont worry we know where you live"
     elif response[0] == "G" or response[1] == "G" :
-        prize = "You have wone a tenner"
+        prize = "You have won a tenner"
     else:
         prize = "sorry, you win nothing"
     return Response(prize, mimetype='text/plain')

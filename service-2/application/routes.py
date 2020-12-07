@@ -5,10 +5,10 @@ import random
 
 
 
-@app.route('/')
+
 @app.route('/alpha', methods=['GET'])
-def aplha():
-    alpa_List=["A","B","C","D","E","F","G","G","G","H","I","J","K"]
+def alpha():
+    alpha_List=["A","B","C","D","E","F","G","G","G","H","I","J","K"]
     alpha1 = random.choice(alpha_List)
     alpha2 = random.choice(alpha_List)
     alphas = alpha1 + alpha2

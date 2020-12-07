@@ -1,0 +1,13 @@
+  
+- hosts: all
+  become: yes
+  roles:
+  - commen
+- hosts: managers
+  become: yes
+  roles:
+  - manager
+- hosts: workers
+  become: yes
+  roles:
+  - worker

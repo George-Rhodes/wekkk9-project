@@ -16,8 +16,44 @@ The requirements the project had to meet were:
 - As part of the project, you need to create an Ansible Playbook that will provision the environment that your application needs to run.
 - The project must make use of a reverse proxy to make your application accessible to the user.
 
+### Aproach
 
 
+### Tracking
+![Imgur](https://i.imgur.com/U5JZOP5.png)
+### Initial Risk assessment
+![Imgur](https://i.imgur.com/wB000WG.png)
+### Version Control
+![Imgur](https://i.imgur.com/2zma8MQ.png)
+## Designs
+### App architecture
+![Imgur](https://i.imgur.com/Hy4nlFG.png)
+### ERD
+![Imgur](https://i.imgur.com/i9Ydk4O.png)
+### First pipeline
+![Imgur](https://i.imgur.com/Xhze8bI.png)
+#### Testing
+![Imgur](https://i.imgur.com/jkAQE8Z.png)
+![Imgur](https://i.imgur.com/FVK3DwN.png)
+![Imgur](https://i.imgur.com/5XVZCnq.png)
+![Imgur](https://i.imgur.com/tlatXPr.png)
+#### Logging
+![Imgur](https://i.imgur.com/xr3anA8.png)
+![Imgur](https://i.imgur.com/qPYvK5w.png)
+### Second version
+![Imgur](https://i.imgur.com/GsId9ql.png)
+### Third version
+![Imgur](https://i.imgur.com/iOZ8Nf9.png)
+### Final version
+![Imgur](https://i.imgur.com/8MF1aD3.png)
+### network architechture
+![Imgur](https://i.imgur.com/Cpkezzh.png)
+### stages of pipeline
 
+### end of development risk assessment
+![Imgur](https://i.imgur.com/8VvxT9C.png)
+### furture improvements
 
+## Author
+George Rhodes
 

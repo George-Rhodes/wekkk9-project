@@ -83,6 +83,11 @@ this is the network achitecture behind the pipeline, showing there was a machine
 i revisited my risk assessment to change and add new risks that where found at the end of the development.
 ![Imgur](https://i.imgur.com/8VvxT9C.png)
 ### furture improvements
+- Having an image server
+- Having a separate NginX server
+- Using slack for log notifications
+- Obvious making the app look pretty
+
 
 ## Author
 George Rhodes

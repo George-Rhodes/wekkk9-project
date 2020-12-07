@@ -8,7 +8,7 @@ import random
 
 @app.route('/alpha', methods=['GET'])
 def alpha():
-    alpha_List=["A","B","C","D","E","F","G","G","G","H","I","J","K"]
+    alpha_List=["A","B","C","D","E","F","G","G","G","H","K","K","K","K","K","K","K"]
     alpha1 = random.choice(alpha_List)
     alpha2 = random.choice(alpha_List)
     alphas = alpha1 + alpha2
